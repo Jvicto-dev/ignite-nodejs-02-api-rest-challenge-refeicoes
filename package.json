@@ -1,0 +1,35 @@
+{
+  "name": "ignite-nodejs-02-api-rest-challenge-refeicoes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "knex": "node --import tsx ./node_modules/knex/bin/cli.js",
+    "migrate": "npm run knex -- migrate:latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jvicto-dev/ignite-nodejs-02-api-rest-challenge-refeicoes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Jvicto-dev/ignite-nodejs-02-api-rest-challenge-refeicoes/issues"
+  },
+  "homepage": "https://github.com/Jvicto-dev/ignite-nodejs-02-api-rest-challenge-refeicoes#readme",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "fastify": "^5.6.2",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7",
+    "zod": "^4.1.12"
+  }
+}
