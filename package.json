@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "knex": "node --import tsx ./node_modules/knex/bin/cli.js",
-    "migrate": "npm run knex -- migrate:latest"
+    "migrate": "npm run knex -- migrate:latest",
+    "rollback": "npm run knex -- migrate:rollback"
   },
   "repository": {
     "type": "git",
