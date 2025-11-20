@@ -117,12 +117,12 @@ export async function mealsRoutes(app: FastifyInstance) {
         const meals = await knex('meals')
             .where({ user_id: request.user.id })
             .select('*')
-            .orderBy('date', 'asc') 
+            .orderBy('date', 'asc')
 
         const totalMeals = meals.length
 
-        const totalOnDiet = meals.filter(m => m.is_on_diet === true).length
-        const totalOffDiet = meals.filter(m => m.is_on_diet === false).length
+        const totalOnDiet = meals.filter(m => m.is_on_diet == 1).length
+        const totalOffDiet = meals.filter(m => m.is_on_diet == 0).length
 
         // Melhor sequência dentro da dieta:
         let bestSequence = 0
